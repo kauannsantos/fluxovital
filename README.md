@@ -15,7 +15,7 @@
 ---
 
 ## Tecnologias
-- **Backend**: PHP (Laravel) ou Python (Flask/Django)
+- **Backend**: PHP (Laravel) 
 - **Frontend**: HTML, CSS, JavaScript (ou frameworks como React/Vue)
 - **Banco de dados**: MySQL / PostgreSQL
 - **Hospedagem**: GitHub Pages, Heroku ou outro
@@ -27,6 +27,6 @@
 - Kauã Santos (github.com/kauandrummond)
 - Hugo Rafael (github.com/Hugh-R13)
 - Lucas Apoliano (github.com/Apolian23)
-- Paulo Vinicius ()
-- Gustavo Henrique ()
+- Paulo Vinicius (github.com/Paulouss)
+- Gustavo Henrique (github.com/gusttavo-07)
 
