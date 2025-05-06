@@ -1,3 +1,3 @@
-# fluxo_vital
+# fluxo_vital 🩸
 Repositório dedicado ao desenvolvimento do projeto interdisciplinar.
 
