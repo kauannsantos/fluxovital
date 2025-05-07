@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FLUXO VITAL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1.5rem;
+    }
+    .hero {
+      background-color: #e6f2ff;
+      padding: 2rem 0;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    .logo-img {
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+    <img src="https://media.discordapp.net/attachments/1367500914264637570/1369087428178083963/ChatGPT_Image_1_de_mai._de_2025_09_40_05.png?ex=681b3e47&is=6819ecc7&hm=a805f7b780667ae86a1a6eebdcb472fb9af84f5e7cb2af7f6e519c3312697505&=&format=webp&quality=lossless&width=676&height=676" alt="Logo" class="logo-img">
+    <div>
+      <h1>FLUXO VITAL</h1>
+      <p class="mb-0" style="font-family: 'Georgia', serif; font-size: 1.2rem;">Salve uma vida com um pequeno gesto!</p>
+    </div>
+  </header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-4 fs-5">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre o Hospital</a></li>
+        <li class="nav-item"><a class="nav-link" href="#unidades">Unidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#exames">Exames</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Fale Conosco</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section class="hero text-center">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.pinimg.com/originals/d4/2d/99/d42d99ca608ff585ba46d46d3fef0a49.jpg" class="d-block mx-auto" style="width: 88%; height: 700px; object-fit: cover;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://th.bing.com/th/id/R.407fad4dd70ff2a650c99975681275cf?rik=TMBqU7sbnZK12w&riu=http%3a%2f%2fmedia.beam.usnews.com%2f8d%2f54%2fb93256134c9782148fc03484d795%2f160816-editorial.JPG&ehk=y37XvzcWLeJeu%2f96WpLhbUSRUjcV1U6rHNClCxmJ%2fQc%3d&risl=&pid=ImgRaw&r=0" class="d-block mx-auto" style="width: 88%; height: 700px; object-fit: cover;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/originals/8c/29/aa/8c29aa9b625e03c079da3408563fa672.jpg" class="d-block mx-auto" style="width: 88%; height: 700px; object-fit: cover;" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="mt-5">
+        <a href="#agendamento" class="btn btn-primary btn-lg mx-2">Agendar Consulta</a>
+        <a href="#cadastro" class="btn btn-outline-primary btn-lg mx-2">Cadastrar-se</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container text-center my-5" id="servicos">
+    <h2>Central de Atendimento</h2>
+    <p>Telefone: (98) 9203-3620</p>
+  </section>
+
+  <section class="container text-center my-5" id="agendamento">
+    <h2>Agendamento</h2>
+    <p>Veja nossos exames e especialidades disponíveis.</p>
+  </section>
+
+  <section class="container my-5" id="cadastro">
+    <h2 class="text-center mb-4">Cadastro</h2>
+    <form class="bg-light p-4 rounded shadow">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Nome completo" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email" required>
+      </div>
+      <div class="mb-3">
+        <input type="tel" class="form-control" placeholder="Telefone" required>
+      </div>
+      <div class="mb-3">
+        <select class="form-select" required>
+          <option value="">Selecione uma especialidade</option>
+          <option value="cardiologia">Cardiologia</option>
+          <option value="ortopedia">Ortopedia</option>
+          <option value="pediatria">Pediatria</option>
+        </select>
+      </div>
+      <select class="form-select" required>
+        <option value="">Selecione o seu tipo sanguíneo</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+      
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Mensagem ou sintomas"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-success px-6">Enviar Cadastro</button>
+      </div>
+    </form>
+  </section>
+  
+  <footer id="contato">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Hospital Vida Saudável. Todos os direitos reservados.</p>
+      <p>Email: contato@hospitalvidasaudavel.com.br | WhatsApp: (98) 90000-0000</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
