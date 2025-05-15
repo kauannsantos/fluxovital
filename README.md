@@ -1,4 +1,4 @@
-# 🩸 Fluxo Vital
+# Fluxo Vital
 
 
 
