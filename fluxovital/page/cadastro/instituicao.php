@@ -126,6 +126,12 @@ session_start();
         </div>
       </div>
 
+      <!-- Campo Senha -->
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" id="senha" class="form-control" required placeholder="Digite uma senha">
+      </div>
+
       <div class="mb-3">
         <label for="horario_funcionamento" class="form-label">Horário de Funcionamento</label>
         <input type="text" id="horario_funcionamento" class="form-control" placeholder="Seg a Sex - 08h às 18h" required>
