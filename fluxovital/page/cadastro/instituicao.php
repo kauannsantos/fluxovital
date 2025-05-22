@@ -12,39 +12,27 @@ session_start();
 
   <style>
     body {
-      background: url('https://i.imgur.com/GgL1bsq.jpeg') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .bg-overlay {
-      background-color: rgba(255, 255, 255, 0.92);
-      border-radius: 10px;
-      padding: 30px;
-      margin-top: 30px;
-    }
-
-    footer {
-      margin-top: 50px;
-      background-color: #a40000;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
+      background-color: #f2e3d5;
     }
   </style>
 </head>
 <body>
+
   <!-- Header -->
-  <div class="container text-center mt-4">
-    <h1 class="display-4 text-white fw-bold bg-danger p-3 rounded">FLUXO VITAL</h1>
+  
+  <div class="bg-danger text-white text-center p-4">
+     <h1 class="fw-bold m-0">FLUXO VITAL</h1>
   </div>
 
+
   <!-- Formulário -->
-  <div class="container bg-overlay shadow-lg">
-    <h2 class="mb-4 text-center text-danger">Cadastro </h2>
+  <div class="container mt-4">
+    <h2 class="mb-4 text-center text-danger">Cadastro de Instituição</h2>
     <form>
+
       <div class="row mb-3">
         <div class="col-md-6">
-          <label for="nome" class="form-label">Nome </label>
+          <label for="nome" class="form-label">Nome</label>
           <input type="text" id="nome" class="form-control" required>
         </div>
         <div class="col-md-6">
@@ -59,14 +47,7 @@ session_start();
           <select id="tipo_instituicao" class="form-select" required>
             <option value="">Selecione...</option>
             <option>Hospital Público</option>
-            <option>Hospital Particular</option>
-            <option>Posto de Saúde</option>
-            <option>Clínica</option>
-            <option>Laboratório</option>
-            <option>Banco de Sangue</option>
-            <option>Banco de Leite</option>
-            <option>Hemocentro</option>
-            <option>Outro</option>
+            <option>Hospital Particular</option>    
           </select>
         </div>
         <div class="col-md-6">
@@ -82,23 +63,22 @@ session_start();
           </select>
         </div>
       </div>
-      
+
       <label class="form-label">Especialidade ou Serviço</label>
       <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="sangue">
-           <label class="form-check-label" for="sangue">Coleta de Sangue</label>
+        <input class="form-check-input" type="checkbox" id="sangue">
+        <label class="form-check-label" for="sangue">Coleta de Sangue</label>
       </div>
 
       <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="leite">
-         <label class="form-check-label" for="leite">Coleta de Leite</label>
+        <input class="form-check-input" type="checkbox" id="leite">
+        <label class="form-check-label" for="leite">Coleta de Leite</label>
       </div>
 
       <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="medula">
-         <label class="form-check-label" for="medula">Cadastro de Medula</label>
+        <input class="form-check-input" type="checkbox" id="medula">
+        <label class="form-check-label" for="medula">Cadastro de Medula</label>
       </div>
-      
 
       <div class="row mb-3">
         <div class="col-md-8">
@@ -111,23 +91,24 @@ session_start();
         </div>
       </div>
 
-      <div class="row mb-3">
-        <div class="col-md-4">
-          <label for="bairro" class="form-label">Bairro</label>
-          <input type="text" id="bairro" class="form-control" required>
-        </div>
-        <div class="col-md-4">
-          <label for="uf" class="form-label">UF</label>
-          <select id="uf" class="form-select" required>
-            <option value="">-- Selecione --</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="cidade" class="form-label">Cidade</label>
-          <select id="cidade" class="form-select" required>
-            <option value="">-- Selecione o estado primeiro --</option>
-          </select>
-        </div>
+      <div class="mb-3">
+        <label for="local" class="form-label">Local da Instituição</label>
+        <select id="local" class="form-select" required>
+          <option value="">-- Selecione --</option>
+          <option>Jordoa - São Luís</option>
+          <option>Cohab Anil I - São Luís</option>
+          <option>Centro - São Luís</option>
+          <option>Monte Castelo - São Luís</option>
+          <option>Angelim - São Luís</option>
+          <option>Vila Nova - São Luís</option>
+          <option>Madre Deus - São Luís</option>
+          <option>Bequimão - São Luís</option>
+          <option>Apicum - São Luís</option>
+          <option>Alto Alegre do Maranhão</option>
+          <option>Balsas</option>
+          <option>Imperatriz</option>
+          <option>Caxias</option>
+        </select>
       </div>
 
       <div class="row mb-3">
@@ -137,7 +118,7 @@ session_start();
         </div>
         <div class="col-md-4">
           <label for="telefone" class="form-label">Telefone</label>
-          <input type="text" id="telefone" class="form-control" placeholder="(00) 0000-0000" required>
+          <input type="text" id="telefone" class="form-control" placeholder="(DDD) 9XXXX-XXXX" required>
         </div>
         <div class="col-md-4">
           <label for="email" class="form-label">E-mail</label>
@@ -160,40 +141,32 @@ session_start();
         <textarea id="observacoes" rows="4" class="form-control"></textarea>
       </div>
 
-      <button class="btn btn-danger w-100 btn-lg" type="submit">Cadastrar-se aqui </button>
+      <button class="btn btn-danger w-100 btn-lg" type="submit">Cadastrar-se aqui</button>
     </form>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p class="mb-0">© 2025 Fluxo Vital - Todos os direitos reservados</p>
-  </footer>
+ 
 
-  <!-- Script modificado: apenas Maranhão e suas cidades -->
+  <!-- Script para máscara de telefone -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const ufSelect = document.getElementById("uf");
-      const cidadeSelect = document.getElementById("cidade");
+    const telefoneInput = document.getElementById("telefone");
 
-      // Adiciona apenas Maranhão
-      const optionMA = document.createElement("option");
-      optionMA.value = "MA";
-      optionMA.textContent = "Maranhão";
-      optionMA.selected = true;
-      ufSelect.appendChild(optionMA);
+    telefoneInput.addEventListener("input", function (e) {
+      let input = e.target.value.replace(/\D/g, '');
+      
+      if (input.length > 11) {
+        input = input.slice(0, 11);
+      }
 
-      // Carrega automaticamente as cidades do Maranhão
-      fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados/MA/municipios")
-        .then(response => response.json())
-        .then(cidades => {
-          cidadeSelect.innerHTML = "<option value=''>-- Selecione a cidade --</option>";
-          cidades.forEach(cidade => {
-            const option = document.createElement("option");
-            option.value = cidade.nome;
-            option.textContent = cidade.nome;
-            cidadeSelect.appendChild(option);
-          });
-        });
+      if (input.length <= 2) {
+        input = '(' + input;
+      } else if (input.length <= 7) {
+        input = '(' + input.slice(0, 2) + ') ' + input.slice(2);
+      } else {
+        input = '(' + input.slice(0, 2) + ') ' + input.slice(2, 7) + '-' + input.slice(7);
+      }
+
+      e.target.value = input;
     });
   </script>
 </body>
