@@ -234,8 +234,32 @@
         <li class="nav-item"><a class="nav-link" href="/fluxovital/page/categorias/sobrenos.php">Sobre Nós</a></li>
         <li class="nav-item"><a class="nav-link" href="/fluxovital/page/categorias/contato.php">Contato</a></li>
         <li class="nav-item">
-          <a href="/fluxovital/doador_instituicao/home.php" class="btn btn-light ms-lg-3 mt-2 mt-lg-0">Entrar / Cadastrar</a>
-        </li>
+    <?php if (isset($_SESSION['usuario_id'])): ?>
+        <div class="dropdown">
+            <a class="btn btn-light ms-lg-3 mt-2 mt-lg-0 dropdown-toggle" 
+               href="#" 
+               role="button" 
+               id="dropdownPerfil" 
+               data-bs-toggle="dropdown" 
+               aria-expanded="false">
+                <i class="bi bi-person-fill me-1"></i> PERFIL
+            </a>
+            
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownPerfil">
+                <li><a class="dropdown-item" href="/fluxovital/perfil/perfil.php">
+                    <i class="bi bi-person-lines-fill me-2"></i>Meu Perfil
+                </a></li>
+                <li><a class="dropdown-item text-danger" href="/fluxovital/logout/logout.php">
+                    <i class="bi bi-box-arrow-right me-2"></i>Sair
+                </a></li>
+            </ul>
+        </div>
+    <?php else: ?>
+        <a href="/fluxovital/doador_instituicao/home.php" class="btn btn-light ms-lg-3 mt-2 mt-lg-0">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Entrar / Cadastrar
+        </a>
+    <?php endif; ?>
+</li>
       </ul>
     </div>
   </div>
