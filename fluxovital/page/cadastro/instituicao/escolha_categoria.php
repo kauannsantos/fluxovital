@@ -43,7 +43,7 @@
 
     main {
       flex-grow: 1;
-      max-width: 900px;
+      max-width: 1000px;
       width: 100%;
       padding: 2.5rem 1.5rem;
       margin: 0 auto;
@@ -58,8 +58,14 @@
       margin: 0;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+      gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      fieldset.container-cards {
+        grid-template-columns: 1fr; /* 1 por linha no celular */
+      }
     }
 
     legend {
@@ -75,31 +81,40 @@
       border: none;
       border-radius: 16px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-      padding: 2rem 1.5rem;
+      background-color: white;
+      color: var(--vinho-dark);
+      outline-offset: 4px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      height: 100%;
+      padding: 0;
+    }
+
+    .card-inner {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 2rem 1.5rem;
       height: 100%;
-      background-color: white;
-      color: var(--vinho-dark);
-      user-select: none;
-      outline-offset: 4px;
-      text-align: center;
     }
+
     button.card-categoria:focus-visible {
       outline: 3px solid var(--foco);
       transform: translateY(-6px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      outline-offset: 4px;
     }
+
     button.card-categoria:hover {
       background-color: #fce9e9;
       color: var(--vinho);
       transform: translateY(-6px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
+
     button.card-categoria:active {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -112,6 +127,7 @@
       transition: color 0.25s ease;
       user-select: none;
     }
+
     button.card-categoria:hover .icon-categoria,
     button.card-categoria:focus-visible .icon-categoria {
       color: var(--vinho-dark);
@@ -120,8 +136,9 @@
     .titulo-categoria {
       font-size: 1.3rem;
       font-weight: 600;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       min-height: 50px;
+      text-align: center;
       user-select: none;
     }
 
@@ -140,6 +157,7 @@
       transition: background-color 0.25s ease;
       margin-top: auto;
     }
+
     button.card-categoria:hover .btn-categoria,
     button.card-categoria:focus-visible .btn-categoria {
       background-color: var(--vinho-dark);
@@ -158,7 +176,7 @@
     }
 
     @media (max-width: 575.98px) {
-      button.card-categoria {
+      .card-inner {
         padding: 1.5rem 1rem;
       }
 
@@ -175,36 +193,64 @@
 </header>
 
 <main>
-  <form method="POST" action="cadastro_instituicao.php" aria-label="Escolha a categoria da instituição">
-    <fieldset class="container-cards" role="list" aria-labelledby="categoria-legend">
+  <form method="POST" action="login_instituicao.php" aria-label="Escolha a categoria da instituição">
+    <fieldset style="border: none; padding: 0; margin: 0;" aria-labelledby="categoria-legend">
       <legend id="categoria-legend">Categorias disponíveis</legend>
+      
+      <!-- ...código anterior permanece igual... -->
 
-      <button type="submit" name="categoria" value="Bancos de Doação" class="card-categoria" aria-describedby="desc-banco" aria-pressed="false" tabindex="0">
+<div class="row g-4">
+  <!-- Card 1 -->
+  <div class="col-md-6 col-lg-6">
+    <button type="submit" name="categoria" value="Bancos de Doação" class="card-categoria w-100" aria-describedby="desc-banco">
+      <div class="card-inner">
         <i class="bi bi-droplet icon-categoria" aria-hidden="true"></i>
         <div class="titulo-categoria" id="desc-banco">Bancos de Doação</div>
         <span class="btn-categoria" aria-hidden="true">Selecionar</span>
-      </button>
+      </div>
+    </button>
+  </div>
 
-      <button type="submit" name="categoria" value="Hospitais" class="card-categoria" aria-describedby="desc-hospital" aria-pressed="false" tabindex="0">
+  <!-- Card 2 -->
+  <div class="col-md-6 col-lg-6">
+    <button type="submit" name="categoria" value="Hospitais" class="card-categoria w-100" aria-describedby="desc-hospital">
+      <div class="card-inner">
         <i class="bi bi-hospital icon-categoria" aria-hidden="true"></i>
         <div class="titulo-categoria" id="desc-hospital">Hospitais</div>
         <span class="btn-categoria" aria-hidden="true">Selecionar</span>
-      </button>
+      </div>
+    </button>
+  </div>
 
-      <button type="submit" name="categoria" value="ONGs" class="card-categoria" aria-describedby="desc-ong" aria-pressed="false" tabindex="0">
-        <i class="bi bi-handshake icon-categoria" aria-hidden="true"></i>
+  <!-- Card 3 -->
+  <div class="col-md-6 col-lg-6">
+    <button type="submit" name="categoria" value="ONGs" class="card-categoria w-100" aria-describedby="desc-ong">
+      <div class="card-inner">
+        <i class="bi bi-people icon-categoria" aria-hidden="true"></i>
         <div class="titulo-categoria" id="desc-ong">ONGs Parceiras</div>
         <span class="btn-categoria" aria-hidden="true">Selecionar</span>
-      </button>
+      </div>
+    </button>
+  </div>
 
-      <button type="submit" name="categoria" value="Outros" class="card-categoria" aria-describedby="desc-outros" aria-pressed="false" tabindex="0">
+  <!-- Card 4 -->
+  <div class="col-md-6 col-lg-6">
+    <button type="submit" name="categoria" value="Outros" class="card-categoria w-100" aria-describedby="desc-outros">
+      <div class="card-inner">
         <i class="bi bi-building icon-categoria" aria-hidden="true"></i>
         <div class="titulo-categoria" id="desc-outros">Outros (UBS, Clínicas etc.)</div>
         <span class="btn-categoria" aria-hidden="true">Selecionar</span>
-      </button>
+      </div>
+    </button>
+  </div>
+</div>
+
+<!-- ...continuação do código permanece igual... -->
+
     </fieldset>
   </form>
 </main>
+
 
 <footer>
   © 2025 Fluxo Vital — Todos os direitos reservados
